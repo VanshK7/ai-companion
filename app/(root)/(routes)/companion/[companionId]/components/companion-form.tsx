@@ -7,6 +7,7 @@ import {zodResolver} from "@hookform/resolvers/zod";
 
 import {Form, FormField, FormItem, FormControl, FormMessage} from "@/components/ui/form";
 import {Separator} from "@/components/ui/separator";
+import { ImageUpload } from '@/components/image-upload';
 
 interface CompanionFormProps{
     initialData: Companion | null;
@@ -75,7 +76,11 @@ export const CompanionForm = ({
                          render={({ field }) => (
                             <FormItem className="flex flex-col items-center justify-center space-y-4">
                                 <FormControl>
-                                    Image Upload Component
+                                    <ImageUpload
+                                        disabled={isLoading}
+                                        onChange={field.onChange}
+                                        value={field.value}
+                                    />
                                 </FormControl>
                                 <FormMessage/>
                             </FormItem>
