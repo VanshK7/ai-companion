@@ -1,11 +1,10 @@
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 datasource db {
-  provider     = "mysql"
-  url          = "mysql://6ktkz4xc9uiucdnzm9cd:pscale_pw_pW9FGerQ4ethFoaJEJSWkUBz8rM1tUfrYlqanvYokUp@aws.connect.psdb.cloud/ai-companion?sslaccept=strict"
+  provider = "mysql"
+  url = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
