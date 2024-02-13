@@ -1,13 +1,19 @@
-"use-client";
+"use client";
 
 import * as z from "zod";
-import {Category, Companion} from "@prisma/client";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
+import { Wand2 } from "lucide-react";
+import { Category, Companion } from "@prisma/client";
 
-import {Form, FormField, FormItem, FormControl, FormMessage} from "@/components/ui/form";
-import {Separator} from "@/components/ui/separator";
-import { ImageUpload } from '@/components/image-upload';
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { ImageUpload } from "@/components/image-upload";
+import { Separator } from "@/components/ui/separator";
+import { Select, SelectContent, SelectItem, SelectValue, SelectTrigger } from "@/components/ui/select";
 
 interface CompanionFormProps{
     initialData: Companion | null;

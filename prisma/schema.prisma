@@ -1,10 +1,11 @@
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 datasource db {
   provider = "mysql"
-  url = env("DATABASE_URL")
+  url = "mysql://404jjnapvn8uva8lccg6:pscale_pw_hr4sWsXWtweZ0i7fi60dba0GBuZPOFnbeKtE2RIrPBb@aws.connect.psdb.cloud/ai-companion?sslaccept=strict"
   relationMode = "prisma"
 }
 
@@ -29,6 +30,7 @@ model Companion {
 
   category      Category @relation(fields: [categoryId], references: [id])
   categoryId    String
+
 
   @@index([categoryId])
   @@fulltext([name])
