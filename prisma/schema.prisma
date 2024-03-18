@@ -5,9 +5,10 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url = "mysql://404jjnapvn8uva8lccg6:pscale_pw_hr4sWsXWtweZ0i7fi60dba0GBuZPOFnbeKtE2RIrPBb@aws.connect.psdb.cloud/ai-companion?sslaccept=strict"
+  url = "mysql://5n0gpxndktwhpp6so9qs:pscale_pw_aL3s9deS47q6BobgV8Jl7aTgM1al2MThioj0o2dAlKF@aws.connect.psdb.cloud/ai-companion?sslaccept=strict"
   relationMode = "prisma"
 }
+  
 
 model Category {
   id            String @id @default(uuid())
