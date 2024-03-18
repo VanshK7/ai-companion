@@ -222,7 +222,7 @@ export const CompanionForm = ({
                                     <FormDescription>
                                         Describe in detail your companion's backstory and relevant details.
                                     </FormDescription>
-                                    <FormMessage/>
+                                    <FormMessage/>     
                                 </FormItem>
                             )}
                             />
